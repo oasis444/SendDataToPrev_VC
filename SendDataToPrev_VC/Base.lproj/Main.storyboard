@@ -22,12 +22,12 @@
                                     <constraint firstAttribute="height" constant="50" id="PFt-U7-jIc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UfI-RZ-pNo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F1R-As-hLY"/>
                             <constraint firstItem="UfI-RZ-pNo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="XlJ-Um-KaS"/>
@@ -161,7 +161,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P2S-dy-VJl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="P2S-dy-VJl" firstAttribute="trailing" secondItem="Ech-RU-262" secondAttribute="trailing" constant="24" id="4bN-aW-MSe"/>
                             <constraint firstItem="sVj-BF-uwB" firstAttribute="leading" secondItem="P2S-dy-VJl" secondAttribute="leading" constant="24" id="DRp-ed-fha"/>
@@ -213,8 +213,8 @@
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

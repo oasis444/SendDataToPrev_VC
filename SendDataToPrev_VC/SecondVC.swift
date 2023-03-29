@@ -22,12 +22,14 @@ class SecondVC: UIViewController {
     @IBOutlet weak var orangeBtn: UIButton!
     
     weak var delegate: LEDBoardSettingDelegate? // weak를 붙이지 않는다면 강한 참조에 의해 메모리 누수 발생
+    var text: String?
     var textColor: UIColor = .systemYellow
     var backgroundColor: UIColor = .black
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
+        configure()
     }
     
     @IBAction func textColorBtn(_ sender: UIButton) {
@@ -62,6 +64,12 @@ class SecondVC: UIViewController {
             textColor: textColor,
             backgroundColor: backgroundColor)
         navigationController?.popViewController(animated: true)
+    }
+    
+    private func configure() {
+        textField.text = text
+        changeTextColor(color: textColor)
+        changeBackColor(color: backgroundColor)
     }
     
     private func changeTextColor(color: UIColor) {

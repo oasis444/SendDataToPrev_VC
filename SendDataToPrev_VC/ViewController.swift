@@ -27,6 +27,9 @@ class ViewController: UIViewController, LEDBoardSettingDelegate {
     @objc func tappedButton() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
         vc.delegate = self
+        vc.text = textLabel.text
+        vc.textColor = textLabel.textColor
+        vc.backgroundColor = textLabel.backgroundColor ?? .black
         navigationController?.pushViewController(vc, animated: true)
     }
     
