@@ -7,9 +7,9 @@
 
 import UIKit
 
-protocol LEDBoardSettingDelegate: AnyObject {
-    func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor)
-}
+//protocol LEDBoardSettingDelegate: AnyObject {
+//    func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor)
+//}
 
 class SecondVC: UIViewController {
 
@@ -21,7 +21,9 @@ class SecondVC: UIViewController {
     @IBOutlet weak var blueBtn: UIButton!
     @IBOutlet weak var orangeBtn: UIButton!
     
-    weak var delegate: LEDBoardSettingDelegate? // weak를 붙이지 않는다면 강한 참조에 의해 메모리 누수 발생
+//    weak var delegate: LEDBoardSettingDelegate? // weak를 붙이지 않는다면 강한 참조에 의해 메모리 누수 발생
+    
+    var data: ((_ textString: String?, _ textUIColor: UIColor, _ textbackgroundUIColor: UIColor) -> Void)?
     var text: String?
     var textColor: UIColor = .systemYellow
     var backgroundColor: UIColor = .black
@@ -59,11 +61,22 @@ class SecondVC: UIViewController {
     }
     
     @IBAction func saveBtn(_ sender: UIButton) {
-        self.delegate?.changedSetting(
-            text: textField.text,
-            textColor: textColor,
-            backgroundColor: backgroundColor)
+        
+        // Option 1: Use protocol
+//        self.delegate?.changedSetting(
+//            text: textField.text,
+//            textColor: textColor,
+//            backgroundColor: backgroundColor)
+        
+        // Option 2: Use closure
+        data?(textField.text, textColor, backgroundColor)
         navigationController?.popViewController(animated: true)
+    }
+    
+    func setData(text: String?, textcolor: UIColor, backgroundColor: UIColor) {
+        self.text = text
+        self.textColor = textcolor
+        self.backgroundColor = backgroundColor
     }
     
     private func configure() {
