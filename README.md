@@ -1,5 +1,5 @@
 # SendDataToPrev_VC
 
-Use: protocol
+Use: protocol, closure
 
 feature: Data send prev ViewController
